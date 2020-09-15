@@ -4,11 +4,7 @@ services:
 
   loragtwpktfwd:
     restart: always
-    build:
-      context: loragtwpktfwd
-      args:
-        - LORA_UDP=1680
-        - MINER_URL=helium-miner
+    image: pastagringo/helium_sx1302hal_us:latest
     privileged: true
 
   helium-miner:
